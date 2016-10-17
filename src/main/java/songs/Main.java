@@ -11,5 +11,6 @@ public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         context.getBean(PopularWordPrinter.class).printTopX("data/songs/beatles/*",3);
+        context.getBean(ProfileService.class).print();
     }
 }
